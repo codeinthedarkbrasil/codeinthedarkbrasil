@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://tomato-timer.com/# -->
+<html class=" js no-touch svg inlinesvg svgclippaths no-ie8compat"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Timer</title>
+<link rel="stylesheet" href="./TomatoTimer_files/foundation.css">
+<script type="text/javascript" async="" src="./TomatoTimer_files/ga.js"></script><script src="./TomatoTimer_files/foundation.min.js"></script>
+<script src="./TomatoTimer_files/howler.min.js"></script>
+<script src="./TomatoTimer_files/jquery.min.js"></script>
+</head>
+<body style="zoom: 1;">
+<!-- Header and Nav -->
+<!---->
+<!-- Header -->
+    <div id="default_container">
+  		<h1 id="timer_default">15:00</h1><br>
+	 </div>
+  <div class="buttons">
+
+    
+    <buttom class="success radius large button" id="timer_start" type="submit" value="Start">Start</buttom>
+    <buttom class="alert radius large button" id="timer_pause" type="submit" value="Stop">Stop</buttom>
+    <button class="radius large secondary button" id="timer_reset" type="submit" value="Reset">Reset</button>
+ </div>
+
+<!-- <script type="text/javascript" src="./TomatoTimer_files/notify.js"></script> -->
+<script type="text/javascript" src="./TomatoTimer_files/jquery.countdown.js"></script>
+<script type="text/javascript" src="./TomatoTimer_files/tomato.js"></script>
+
+
+<script type="text/javascript">
+function saveSETTINGS() {
+  var snd = $('#alertoption').val();
+  var vol = $('#volume').val();
+  localStorage.setItem("alertoption",snd);
+  localStorage.setItem("volumeoption",vol);
+}
+
+function resetSETTINGS() {
+    localStorage.setItem("alertoption","alarmwatch");
+    localStorage.setItem("volumeoption",0.5);
+    $("#alertoption").val("alarmwatch");
+    $("#volume").val(0.5);
+}
+</script>
